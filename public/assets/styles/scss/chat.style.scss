@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html {
+    font-size: 10px;
+    background-color: #f2f2f2;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d9d9d9;
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #cccccc;
+}
+
+.mega-box {
+    max-width: 80rem;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+#chat-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+.alert {
+    align-self: center;
+    font-size: 1.2rem;
+}
+
+.message-box {
+    min-width: 10rem;
+    max-width: 30rem;
+    border-radius: 0.7rem;
+    background-color: #fff;
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    color: #2e2e2e;
+    align-self: flex-start;
+    word-wrap: break-word
+}
+
+.message-box h2 {
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.message-box p {
+    font-size: 1.2rem;
+}
+
+.message-box.sent {
+    align-self: flex-end;
+    background-color: #d9e1ff;
+}
+
+.send-message textarea {
+    resize: none;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.7rem;
+    border-color: #dbdbdb;
+    outline-color: #cfcfcf;
+}

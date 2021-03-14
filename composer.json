@@ -1,0 +1,15 @@
+{
+    "require": {
+        "ciro23/mvc-framework": "dev-master",
+        "nikic/fast-route": "^1.3",
+        "cboden/ratchet": "^0.4.3"
+    },
+
+    "autoload": {
+        "classmap": [
+            "app/core/",
+            "app/controllers/",
+            "app/models/"
+        ]
+    }
+}
