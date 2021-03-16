@@ -19,7 +19,7 @@ conn.onopen = function(e) {
 };
 
 /**
- * executes when the a message is received
+ * executes when a message is received
  * 
  * @param object e
  */
