@@ -6,6 +6,10 @@ require_once __DIR__ . "/../vendor/autoload.php";
 // requires the routes
 require_once __DIR__ . "/../app/core/routes.php"; 
 
+// saves the env vars in the $_ENV superglobal
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "/../app/config/");
+$dotenv->load();
+
 // gets the current route
 $httpMethod = $_SERVER['REQUEST_METHOD'];
 $uri = $_SERVER['REQUEST_URI'];
