@@ -38,10 +38,6 @@ class UserModel extends Mvc\Model {
             return "username-must-be-shorter-than-20-characters";
         }
 
-        if (preg_match("/[^A-Za-z0-9]/", $username)) {
-            return "username-cannot-contains-special-characters";
-        }
-
         return false;
     }
 }
