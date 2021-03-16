@@ -6,6 +6,12 @@
     <title>Chat App</title>
     <link rel="stylesheet" href="/assets/styles/css/chat.style.css">
 
+    <script>
+        /**
+         * @var connection object
+         */
+        var conn = new WebSocket("ws://<?= $_ENV['server'] . ':' . $_ENV['port'] ?>");
+    </script>
     <script src="/assets/js-scripts/chat.script.js"></script>
 </head>
 <body>
