@@ -1,21 +1,35 @@
 /**
- * @var connection object
+ * creates the json template of the message to send
+ * 
+ * @param string from
+ * @param string msg
+ * @param string type
  */
-var conn = new WebSocket("ws://localhost:8080");
+function createJSON(from, msg, type) {
+    return {
+        "from": from,
+        "msg": msg,
+        "type": type
+    };
+}
+
+/**
+ * sends a data json to the other connections
+ * 
+ * @param string from
+ * @param string msg
+ * @param string type
+ */
+function send(data) {
+    conn.send(JSON.stringify(data));
+}
 
 /**
  * executes when the connection is opened
- * 
- * @param object e
  */
-conn.onopen = function(e) {
-    var data = {
-        "from": getCookie("username"),
-        "msg": "",
-        "type": "joined"
-    };
-
-    conn.send(JSON.stringify(data));
+conn.onopen = function() {
+    var data = createJSON(getCookie("username"), "", "joined");
+    send(data);
 };
 
 /**
@@ -88,18 +102,13 @@ window.onload = function() {
             // clears the textarea
             textarea.value = "";
 
-            // creates a json with the data to send
-            var data = {
-                "from": getCookie("username"),
-                "msg": msg,
-                "type": "message"
-            };
+            var data = createJSON(getCookie("username"), msg, "message")
 
             // shows the message in the user browser
             showMessage(data.from, data.msg, data.type, "sent");
 
             // sends the message to the other connections
-            conn.send(JSON.stringify(data));
+            send(data);
         }
     }
 }
