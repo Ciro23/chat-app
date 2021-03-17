@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="/assets/styles/css/set-username.style.css">
 </head>
 <body>
-    <form action="/set-username/action" method="POST">
-        <input type="text" placeholder="Your name" name="username" maxlength="20">
-        <input type="submit" value="Chat">
-    </form>
+    <div class="mega-box">
+        <h2>Start chatting right now</h2>
+        <form action="/set-username/action" method="POST">
+            <input type="text" placeholder="Your name" name="username" maxlength="20">
+            <input type="submit" value="Chat">
+        </form>
+    </div>
 </body>
 </html>
