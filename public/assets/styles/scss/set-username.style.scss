@@ -1,10 +1,24 @@
 @import "common.style.scss";
 
-form {
+.mega-box {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 18rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: center;
+    color: #333333;
+}
+
+form {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -20,7 +34,7 @@ input:first-child {
 input:last-child {
     background-color: #5c9dff;
     border-radius: 0.5rem;
-    padding: 0.45rem 1rem;
+    padding: 0.5rem 1rem;
     border: none;
     color: white;
     cursor: pointer;
