@@ -2,8 +2,16 @@
 
 class UserModel extends Mvc\Model {
 
+    /**
+     * @var public $feedbackNegative, contains info to save when an error occurs
+     */
     public $feedbackNegative;
 
+    /**
+     * perform the set username action
+     * 
+     * @return bool, success status
+     */
     public function setUsername() {
         // extracts $username
         extract($_POST);
@@ -25,6 +33,13 @@ class UserModel extends Mvc\Model {
         return true;
     }
 
+    /**
+     * checks if the username is valid
+     * 
+     * @param string $username
+     * 
+     * @return string|false, first on error, false otherwise
+     */
     private function validateUsername($username) {
         if (empty($username)) {
             return "username-cannot-be-empty";

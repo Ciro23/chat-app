@@ -2,6 +2,9 @@
 
 class UserController extends Mvc\Controller {
 
+    /**
+     * shows the set username page
+     */
     public function index() {
         if (isset($_COOKIE['username'])) {
             header("Location: /");
@@ -10,6 +13,9 @@ class UserController extends Mvc\Controller {
         }
     }
 
+    /**
+     * the set username action
+     */
     public function setUsername() {
         $userModel = $this->model("user");
 
